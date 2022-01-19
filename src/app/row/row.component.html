@@ -1,0 +1,5 @@
+<div class="row" >
+  <div class="row-title">{{item.title}}</div>
+  <div class="row-check" [class.row-checkActive]="!item.check" (click)="checkedFunc(item)">&#10003;</div>
+  <div class="row-delete" (click)="deleteFunc()">&#10006;</div>
+</div>

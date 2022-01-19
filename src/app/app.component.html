@@ -1,0 +1,9 @@
+<div class="form">
+  <div class="form-header">
+    <input type="text" class="form-header-input" #newTaskInput placeholder="Описание дела...">
+    <button class="form-header-button" (click)="add(newTaskInput.value)">Добавить</button>
+  </div>
+  <div class="form-table">
+    <app-row class="appRow" *ngFor="let item of rows; let i=index" [item]="item" [index]="i" (onRemove)="remove($event)"></app-row>
+  </div>
+</div>
